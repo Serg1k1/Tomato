@@ -1,0 +1,1185 @@
+body{
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #d4d4d4;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, red, green);
+	border-radius: 8px;
+	border: 3px solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to bottom, #ED1527, #05578A);
+}
+
+.loader__bg {
+	position: fixed;
+	background-color: #fff;
+	z-index: 9999999;
+	width: 100%;
+	height: 100%;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader:before,
+.loader:after{
+	content: '';
+	border: 1em solid #ff5733;
+	border-radius: 50%;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: loader 2s linear infinite;
+	opacity: 0;
+}
+
+
+.loader:before{
+	animation-delay: .5s 
+}
+
+@keyframes loader{
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+}
+
+.header{
+	background-color: #F9F9F9;
+	position: relative;
+}
+
+.wave{
+	display: block;
+}
+
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	z-index: 100;
+}
+
+
+
+.application{
+	display: flex;
+	align-items: center;
+}
+
+.application__img{
+	width: 40px;
+	height: 40px;
+}
+
+.application__text-main{
+	margin-left: 13px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.015em;
+	color: #000000;
+	font-family: Montserrat;
+}
+
+.nav__link:not(:last-child) {
+	margin-right: 10px;
+}
+
+.nav__link{
+	text-decoration: none;
+	letter-spacing: 0.015em;
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: #000000;
+	position: relative;
+	transition: all 0.2s;
+}
+
+.nav__link-active{
+	color: #CF0038;
+}
+
+
+
+.nav__link:after{
+	content: '';
+	display: block;	
+	width: 100%;
+	height: 1px;
+	background-color: #CF0038;
+	transform: scaleX(0);
+	position: absolute;
+	transition: all 0.2s;
+	left: 0;
+	top: 100%;
+}
+
+.nav__link:hover:after{
+	transform: scaleX(1);
+}
+
+.nav__link:hover{
+	color: #CF0038;
+}
+
+.call__number{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+	color: #000000;
+}
+
+.call__email{
+	text-align: right;
+	color: #CF0038;
+	font-family: Roboto;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+
+.header__main{
+	display: flex;
+	margin-top: 70px;
+	justify-content: space-between;
+}
+
+.header__main-text{
+	background: url(../images/tomato/tomato2.png) no-repeat bottom 150px right 340px;
+}
+
+.header__title{
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 130%;
+	letter-spacing: 0.035em;
+	text-transform: uppercase;
+	color: #000000;
+	position: relative;
+}
+
+.tomato1{
+	position: absolute;
+	left: 450px;
+	top: 100px;
+}
+
+.title-red{
+	color: #CF0038;
+}
+
+.title-green{
+	color: #007838;
+}
+
+.header__suptitle{
+	margin-top: 20px;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.application-or-call{
+	display: flex;
+	margin-top: 44px;
+	align-items: center;
+}
+
+.button-medium{
+	background-color: #CF0038;
+	box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	color: #fff;
+	padding: 15px 41px;
+	transition: all 0.2s;
+	border: none;
+	font-size: 18px;
+	line-height: 21px;
+	font-family: Ubuntu;
+	font-weight: 500;
+	cursor: pointer;
+	outline: none;
+}
+
+.button-medium:hover{
+	background-color: #F91201;
+}
+
+.or-call{
+	color: #8E8E8E;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 15px;
+	margin-left: 32px;
+}
+
+.application__cal-number{
+	margin-left: 19px;
+}
+
+.application-number{
+	color: #000000;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+	margin-left: 1px;
+}
+
+
+
+.header__img{
+	max-width: 542px;
+	width: 100%;
+	max-height: 344px;
+	height: auto;
+}
+
+.advantage{
+	display: flex;
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+
+.advantage__item:not(:last-child) {
+	margin-right: 80px;
+}
+
+.advantage__text{
+	font-family: Ubuntu;
+	font-size: 16px;
+	line-height: 130%;
+	color: #000000;
+}
+
+
+.section{
+	padding: 40px 0;
+}
+
+.section__title{
+	text-align: center;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+
+.views__cards{
+	display: flex;
+	margin-top: 50px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.views__item{
+	flex-basis: 22%;
+	min-height: 260px;
+	background-color: #F3F2F2;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+}
+
+.views__header{
+	padding: 0 50px;
+	padding-bottom: 25px;
+	padding-top: 16px;
+}
+
+.views__title{
+	text-align: center;
+	color: #252525;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.views__img{
+	width: 230px;
+	height: 150px;
+	object-fit: contain;
+	
+}
+
+.views-position{
+	justify-content: center;
+	display: flex;
+}
+
+
+.views__button{
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 9px 26px;
+	border-radius: 5px;
+	border: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.views__button--green{
+	background: #007838;
+}
+
+.views__button--red{
+	background: #CF0038;
+}
+
+.button__text{
+	margin-left: 8px;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+
+.section__grey{
+	background: #F8F8F8;
+	position: relative;
+}
+
+.wave__revers{
+	display: block;
+	transform: rotate(180deg);
+}
+
+.wave__normal{
+	display: block;
+}
+
+.features{
+	padding-top: 90px;
+}
+
+.features__row-one{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.features__img{
+	display: block;
+	margin-bottom: 15px;
+}
+
+.features__title-text{
+	font-family: Roboto;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+}
+
+.features__suptitle{
+	margin: auto;
+	padding-top: 13px;
+	max-width: 360px;
+	width: 100%;
+}
+
+.features__suptitle-text{
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+	text-align: center;
+}
+
+.wegetables{
+	display: flex;
+	 align-items: center; 
+	justify-content: space-between;
+}
+
+.wegetables__column-one{
+	flex-direction: column;
+	flex-basis: 29%;
+	justify-content: center;
+}
+
+.wegetables__column-two{
+	flex-direction: column;
+	flex-basis: 29%;
+	display: flex;
+	align-items: center;
+}
+
+
+.wegetables__item{
+	margin-top: 45px;
+}
+
+.wegetables__title{
+	font-family: Roboto;
+	font-size: 18px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #000000;
+	margin-top: 20px;
+}
+
+
+
+.wegetables__suptitle-text{
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+	margin-top: 13px;
+}
+
+
+
+.button__big{
+	background-color: #CF0038;
+	box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	color: #fff;
+	padding: 15px 44px;
+	margin-top: 50px;
+	display: inline-block;
+	text-align: center;	
+	transition: all 0.3s;
+	border: none;
+	outline: none;
+}
+
+.button__big:hover{
+	background-color: #F91201;
+}
+
+.wegables__or-call{
+	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 0;
+}
+
+.application__cal-number-wg{
+	margin-left: 0;
+}
+
+
+.works{
+	margin-top: 60px;
+}
+
+.for__us{
+	text-align: center;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.works__main-item{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.works__main-text{
+	max-width: 560px;
+	height: auto;
+}
+
+.work__text{
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 21px;
+	color: #000000;
+}
+
+
+.work__suptitle{
+	margin-top: 20px;
+	display: block;
+	font-family: Roboto;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.main__video{
+	max-width: 420px;
+	width: 100%;
+	height: 100%;
+}
+
+.iframe{
+	max-width: 420px;
+	width: 100%;
+}
+
+.katalog{
+	padding: 30px 0;
+}
+
+.warm__card{
+	display: flex;
+	background-color: #F8F8F8;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	padding: 30px;
+	justify-content: space-between;
+}
+
+.warm1{
+	max-width: 154px;
+	width: 100%;
+	height: auto;
+}
+
+
+.warm2{
+	max-width: 281px;
+	width: 100%;
+	height: auto; 
+}
+
+.warm__main-text{
+	display: flex;
+	flex-direction: column;
+	max-width: 544px;
+	width: 100%;
+}
+
+.warm__suptitle{
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 14px;
+	color: #999;
+	margin-top: 5px;
+}
+
+.button-small{
+	background-color: #CF0038;
+	box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	color: #fff;
+	padding: 11px 15px;
+	transition: all 0.2s;
+	border: none;
+	font-size: 15px;
+	line-height: 17px;
+	font-family: Ubuntu;
+	font-weight: 400;
+	cursor: pointer;
+	outline: none;
+}
+
+.button-small:hover{
+	background-color: #F91201;
+}
+
+.number-small{
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color: #000000;	
+}
+
+
+.safity{
+	margin-top: 105px;
+}
+
+
+.tomato__main-star{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+
+.tomato-stars__item{
+	
+}
+
+.tomato__number{
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	color: #8E8E8E;
+	padding-left: 8px;
+
+}
+
+.star{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background: url(../images/tomato-stars/tomato-star.png) no-repeat center;
+}
+
+.star-line{
+	background: url(../images/tomato-stars/line.svg) no-repeat center;
+	width: 78px;
+}
+
+
+
+.stars__text{
+	margin-top: 12px;
+}
+
+.star__title{
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+
+
+
+.star__width{
+	max-width: 150px;
+	margin-top: 7px;
+}
+
+.star__suptitle{
+	font-family: Roboto;
+	font-size: 13px;
+	line-height: 16px;
+	color: #272727;
+}
+
+.star-call{
+	color: red;
+}
+
+.delivery{
+	background-color: #F8F8F8;
+	position: relative;
+}
+
+.delivery__wave-deg{
+	display: block;
+}
+
+.delivery__wave-bottom{
+	display: block;
+	transform: rotate(180deg);
+}
+
+.delivery__text{
+	display: flex;
+	flex-direction: column;
+}
+
+.section__title-delivery{
+	text-align: left;
+}
+
+.delivery-main__text{
+	max-width: 648px;
+	margin-top: 16px;
+}
+
+.delivery__text{
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.01em;
+	color: #252525;
+}
+
+.delivery__wagon{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.main__markets{
+	padding-bottom: 20px;
+}
+
+.markets{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 52px;
+}
+
+.markets__item{
+	position: relative;
+	background-color: #F3F2F2;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;;
+	flex-basis: 20%;
+	height: 86px;
+}
+
+
+.market__img{
+	position: absolute;
+  	left: 0;
+  	top: 0;
+  	bottom: 0;
+    right: 0;
+  	margin: auto;
+  	max-width: 213px;
+  	width: 100%;
+}
+
+.footer{
+	margin-top: 95px;
+	position: relative;
+}
+
+
+.footer__img{
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.footer__main-card{
+	position: absolute;
+	padding: 30px 50px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	top: 50%;
+	left: 18%;
+	transform: translateY(-50%);
+	max-width: 486px;
+	width: 100%;
+	height: 326px;
+}
+
+.footer__title{
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.footer__row-one{
+	display: flex;
+	margin-top: 20px;
+}
+
+.footer__row-two{
+	display: flex;
+	margin-top: 20px;
+}
+
+.footer__row-three{
+	display: flex;
+	margin-top: 20px;
+}
+
+.address{
+	margin-right: 10px;
+}
+
+.footer__bf-text{
+	font-family: Roboto;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+
+.footer__info{
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 19px;
+	color: #252525;
+}
+
+.footer__call{
+	margin-right: 40px;
+}
+
+.footer__mail{
+	margin-right: 50px;
+}
+
+.footer__btn{
+	margin-top: 20px;
+}
+
+.copyright{
+	background-color: #400213;
+	padding: 32px 0;
+}
+
+.copyright__text{
+	text-align: center;
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+
+@media (max-width: 1366px) {
+	.container{
+		max-width: 960px;
+	}
+	
+	.tomato__main-star{
+		justify-content: center;
+	}
+
+	.tomato-stars__item{
+		margin-right: 30px;
+		margin-bottom: 15px;
+	}
+
+	.delivery__wagon{
+		width: 340px;
+		height: 240px;
+	}
+
+	.footer__main-card{
+		max-width: 400px;
+		height: 260px;
+	}
+
+	.footer__btn{
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.container{
+		max-width: 750px;
+	}
+
+
+	.nav{
+		flex-wrap: wrap;
+	}
+
+	.application{
+		width: 50%;
+		max-width: 210px;
+		margin-bottom: 10px;
+	}
+
+	.nav__logo{
+		width: 50%;
+		max-width: 116px;
+		margin-bottom: 10px;
+	}
+
+	.header__main-text{
+		background: none;
+	}
+
+	.tomato1{
+		display: none;
+	}
+
+	.views__item{
+		flex-basis: 37%;
+		margin-bottom: 20px;
+	}	
+
+	.header__main{
+		flex-direction: column;
+		max-width: 600px;
+		margin: auto;
+	}
+
+	.header__main-text{
+		order: 1;
+	}
+
+	.header__main-img{
+		order: 0;
+	}
+
+	.works__main-item{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.works__main-text{
+		margin-bottom: 30px;
+	}
+
+	.warm__card{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.delivery__wagon{
+		display: none;
+	}
+
+	.markets{
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.markets__item{
+		flex-basis: 26%;
+		margin-bottom: 15px;
+	}
+
+	.footer__main-card{
+		display: none;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 560px;
+	}
+
+	.nav{
+		flex-direction: column;
+	}
+
+	.nav__logo{
+		margin-bottom: 20px;
+	}
+
+	.application{
+		margin-bottom: 20px;
+	}
+
+	.nav__item{
+		margin-bottom: 20px;
+	}
+
+	.views__item{
+		flex-basis: 45%;
+	}
+
+	.application-or-call{
+		flex-direction: column;
+	}
+
+	.or-call{
+		margin: 10px 0 10px 0;
+	}
+
+	/*.advantage__item{
+		margin-bottom: 10px;
+	}*/
+
+	.wegetables{
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.wegetables__column-one{
+		flex-basis: 100%;
+	}
+	
+	.order1{
+		order: 1;
+	}
+
+	.wegetables__column-two{
+		order: 2;
+		margin-top: 40px;
+	}
+	
+	.tomato__main-star{
+		justify-content: center;
+		align-items: center;
+	}
+
+	.tomato-stars__item{
+		margin-top: 30px;
+		flex-basis: 43%;
+		max-width: 240px;
+		margin: 10px auto;
+	}
+
+	.section__title-delivery{
+		font-size: 20px;
+	}
+
+	.delivery-main__text{
+		margin: 0;
+	}
+
+	.delivery__text{
+		font-size: 14px;
+	}
+
+	.markets__item{
+		flex-basis: 35%;
+		margin-bottom: 15px;
+	}
+
+
+}
+
+@media (max-width: 578px){
+	.container {
+		max-width: 90%;
+	}
+
+	.header__title{
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.header__suptitle{
+		text-align: center;
+	}
+
+	.section__title{
+		margin-bottom: 30px;
+	}
+
+	.advantage__item:not(:last-child){
+		margin: 0;
+	}
+
+	.advantage{
+		flex-direction: column;
+		max-width: 230px;
+		margin: 20px auto 0;
+	}
+
+	.advantage__text{
+		margin-bottom: 10px;
+	}
+
+	.views__cards{
+		max-width: 280px;
+		margin: auto;
+	}
+
+	.views__item{
+		flex-basis: 100%;
+		margin-bottom: 40px;
+	}
+
+	.weg__img{	
+		width: 300px;
+	}
+
+	/*.iframe{
+		width: 350px;
+	}*/
+
+	.star-line{
+		display: none;
+	}
+
+	.tomato__main-star{
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	
+	.tomato-stars__item{
+		margin: 15px 0;
+		max-width: 190px;
+	}
+
+	.markets__item{
+		flex-basis: 51%;
+		margin-bottom: 15px;
+	}
+
+	.copyright__text{
+		font-size: 12px;
+	}
+
+	.copyright{
+		padding: 15px 0;
+	}
+
+}
